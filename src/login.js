@@ -1,15 +1,52 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField'
+import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
 
-function Login()
-{
-    return(
-        <div>
-            <form noValidate autoComplete="off"  >
-                <TextField variant="outlined" label="Email" />
-                <TextField variant="outlined" label="Password" />
+const useStyle = makeStyles(
+    (theme) => (
+        {
+            root: {
+                display: 'flex',
+                flexWrap: 'wrap',
+                '& > *': {
+                    margin: theme.spacing(1),
+                    width: theme.spacing(48),
+                    height: theme.spacing(48)
+                },
+            },
+        }
+    )
+)
 
-            </form>
+function Login() {
+    const classes = useStyle()
+    return (
+        <div className={classes.root}>
+            <Paper 
+            variant="elevation"
+            elevation={3}
+            >
+                <form noValidate autoComplete="off"  >
+                    <div><TextField
+                        variant="outlined"
+                        type="email"
+                        label="Email" />
+                    </div><br />
+                    <div><TextField
+                        variant="outlined"
+                        type="password"
+                        label="Password" />
+                    </div><br />
+                    <Button
+                        variant="contained"
+                        type="submit"
+                        color="primary" >
+                        Login</Button>
+
+                </form>
+            </Paper>
         </div>
     )
 }
