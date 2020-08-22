@@ -10,12 +10,18 @@ const useStyle = makeStyles(
             root: {
                 display: 'flex',
                 flexWrap: 'wrap',
+                textAlign : 'center',
                 '& > *': {
                     margin: theme.spacing(1),
                     width: theme.spacing(48),
                     height: theme.spacing(48)
                 },
             },
+            form : {
+                marginTop : '20%',
+                // marginLeft : '20%'
+                display : 'inline-block'
+            }
         }
     )
 )
@@ -28,7 +34,7 @@ function Login() {
             variant="elevation"
             elevation={3}
             >
-                <form noValidate autoComplete="off"  >
+                <form className={classes.form} noValidate autoComplete="off"  >
                     <div><TextField
                         variant="outlined"
                         type="email"
