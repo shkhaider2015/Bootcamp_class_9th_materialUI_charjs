@@ -9,7 +9,8 @@ const useStyle = makeStyles(
   (
     {
       root : {
-        // textAlign : 'center',
+        textAlign : 'center',
+        width : '100%',
         '& > *' : {
           // paddingRight : '15px',
           // paddingLeft : '15px',
@@ -18,7 +19,8 @@ const useStyle = makeStyles(
         }
       },
       login : {
-        display : 'inline-block'
+        display : 'inline-block',
+        marginTop : '200%'
       }
 
     }
@@ -30,7 +32,7 @@ function App() {
   return (
     <div className={classes.root}>
       <br />
-      <Container fixed>
+      <Container maxWidth='lg' style={{ border : '1px solid',display : 'flex', justifyContent : 'center', padding : '10px', height : '150mm'}}>
       <Login className={classes.login} />
       </Container>
     </div>
