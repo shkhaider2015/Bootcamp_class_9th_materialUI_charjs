@@ -41,10 +41,6 @@ function App() {
       <br />
       <Container maxWidth='lg' className={classes.container} >
       <Login className={classes.login} />
-      <br/>
-      <br/>
-      <br/>
-      <br/>
       <Signup />
       </Container>
     </div>
