@@ -3,7 +3,7 @@ import './App.css';
 import Login from './login.js'
 import { makeStyles } from '@material-ui/core';
 import Container from '@material-ui/core/Container'
-
+import Signup from "./signup";
 const useStyle = makeStyles(
   (theme) => 
   (
@@ -18,9 +18,16 @@ const useStyle = makeStyles(
           // marginLeft : 'auto',
         }
       },
+      container : {
+        border : '1px solid',
+        display : 'flex',
+        justifyContent : 'center',
+        padding : '10%',
+        height : '180mm',  
+      },
       login : {
         display : 'inline-block',
-        marginTop : '200%'
+        flex : '30',
       }
 
     }
@@ -32,8 +39,13 @@ function App() {
   return (
     <div className={classes.root}>
       <br />
-      <Container maxWidth='lg' style={{ border : '1px solid',display : 'flex', justifyContent : 'center', padding : '10px', height : '150mm'}}>
+      <Container maxWidth='lg' className={classes.container} >
       <Login className={classes.login} />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <Signup />
       </Container>
     </div>
   );

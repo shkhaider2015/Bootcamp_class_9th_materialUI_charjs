@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField'
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import Link from "@material-ui/core/Link";
 
 const useStyle = makeStyles(
     (theme) => (
@@ -20,7 +21,8 @@ const useStyle = makeStyles(
             form : {
                 marginTop : '20%',
                 // marginLeft : '20%'
-                display : 'inline-block'
+                display : 'inline-block',
+                
             }
         }
     )
@@ -33,6 +35,7 @@ function Login() {
             <Paper 
             variant="elevation"
             elevation={3}
+            style={{backgroundColor : '#f0f6ff',}}
             >
                 <form className={classes.form} noValidate autoComplete="off"  >
                     <div><TextField
@@ -49,7 +52,11 @@ function Login() {
                         variant="contained"
                         type="submit"
                         color="primary" >
-                        Login</Button>
+                        Login</Button><br /><br />
+                    
+                    <div>
+                    Don't have an account? <Link href="#">Signup here</Link>
+                    </div>
 
                 </form>
             </Paper>
