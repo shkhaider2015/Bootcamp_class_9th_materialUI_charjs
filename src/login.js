@@ -4,6 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
+import { isLogin, setIsLogin } from "./reducer";
 
 const useStyle = makeStyles(
     (theme) => (
@@ -27,6 +28,13 @@ const useStyle = makeStyles(
         }
     )
 )
+
+const handleClick = (event) =>
+{
+    event.preventDefault();
+    setIsLogin(true)
+    console.log("Clicked !!!")
+}
 
 function Login() {
     const classes = useStyle()
@@ -55,7 +63,7 @@ function Login() {
                         Login</Button><br /><br />
                     
                     <div>
-                    Don't have an account? <Link href="#">Signup here</Link>
+                    Don't have an account? <Link href="#" onClick={handleClick} >Signup here</Link>
                     </div>
 
                 </form>
