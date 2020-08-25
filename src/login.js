@@ -1,4 +1,4 @@
-import React, { useGlobal } from 'react'
+import React from 'react'
 import TextField from '@material-ui/core/TextField'
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
@@ -31,9 +31,9 @@ const useStyle = makeStyles(
 
 function Login() {
     const classes = useStyle()
+
     const handleClick = (event) => {
         event.preventDefault();
-        let [isLogin, setIsLogin] = useGlobal(true)
         console.log("Clicked !!!")
     }
     return (
