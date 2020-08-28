@@ -4,6 +4,8 @@ import Login from './login.js'
 import { makeStyles } from '@material-ui/core';
 import Container from '@material-ui/core/Container'
 import Signup from "./signup";
+import BarChart from './barChart';
+import LineChart from './lineChart';
 
 
 const useStyle = makeStyles(
@@ -43,8 +45,11 @@ function App() {
       <br />
       <Container maxWidth='lg' className={classes.container} >
         
-      <Login className={classes.login} />
-      <Signup />
+      {/* <Login className={classes.login} />
+      <Signup /> */}
+      {/* <BarChart /> */}
+      <LineChart />
+
       </Container>
     </div>
   );
